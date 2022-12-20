@@ -1,18 +1,18 @@
-var contenido =  document.querySelector('#tblEmpleados');
+var contenido = document.querySelector('#tblEmpleados');
 
-function traer(){
+function traer() {
   fetch('http://127.0.0.1:8080/empleados')
-  //fetch('scripts/listaEmpleados.json')
+    //fetch('scripts/listaEmpleados.json')
     .then(res => res.json())
     .then(datos => {
       tabla(datos)
     })
 }
-function tabla(datos){
+function tabla(datos) {
   //console.log(datos)
   tblEmpleados.innerHTML = ''
 
-  for(let valor of datos){
+  for (let valor of datos) {
     //console.log(valor.nombre)
     //console.log(valor)
 
@@ -32,6 +32,12 @@ function tabla(datos){
   }
 }
 
-window.onload = function(){
+function agregar() {
+  swal("Good job!", "You clicked the button!", "success");
+}
+
+window.onload = function () {
   traer();
 }
+
+

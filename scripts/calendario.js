@@ -1,4 +1,4 @@
-$('.calendario').datepicker({
+$('#FechaNacimientoEmpleado').datepicker({
   autoclose: true,
   format: "dd/mm/yyy",
   todayBtn: "linked",
@@ -6,4 +6,3 @@ $('.calendario').datepicker({
   language: "es",
   todayHighlight: true
 });
-
