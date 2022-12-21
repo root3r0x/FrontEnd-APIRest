@@ -55,8 +55,8 @@
   <div class="container-sm text-center">
 
     <!-- Formulario para agregar empleados -->
-    <div id="formEmpleadosAgregar" class="form-floating mb-3" novalidate>
-      <input type=" text" class="form-control needs-validation" id="NombreEmpleado" placeholder="nombre" required>
+    <div id="formEmpleadosAgregar" class="form-floating mb-3">
+      <input type=" text" class="form-control" id="NombreEmpleado" placeholder="nombre" required>
       <label for="NombreEmpleado">Nombre:</label>
     </div>
     <div class="form-floating mb-3">
@@ -72,8 +72,8 @@
       </div>
 
       <div class="form-floating mb-3 col-md ">
-        <input type="tel" minlength="10" maxlength="10" class="form-control" id="TelefonoEmpleado"
-          placeholder="telefono">
+        <input type="number" minlength="10" maxlength="10" class="form-control" id="TelefonoEmpleado"
+          placeholder="telefono" pattern="[0-9]*">
         <label for="NumeroTelefonicoEmpleado">Número Telefónico:</label>
       </div>
 
@@ -81,7 +81,8 @@
 
     <div class="row g-2">
       <div class="form-floating mb-3 col-md">
-        <input value="+" min="01" max="99" type="number" class="form-control" id="EdadEmpleado" placeholder="edad">
+        <input type="number" pattern="[0-9]*" min="01" max="99" class="form-control" id="EdadEmpleado"
+          placeholder="edad">
         <label for="EdadEmpleado">Edad:</label>
       </div>
 
@@ -115,8 +116,6 @@
 
   <script src="scripts/validaciones.js"></script>
   <script src="/scripts/agregarEmpleado.js"></script>
-  <script src="/scripts/main.js"></script>
-
 </body>
 
 </html>

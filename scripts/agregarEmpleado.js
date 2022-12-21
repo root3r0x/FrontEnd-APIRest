@@ -17,7 +17,7 @@ window.onload = function () {
 var btnAdd = document.getElementById('btnAgregarEmpleado');
 var btnCancel = document.getElementById('btnCancelar');
 
-//function validaciones
+//variables inputs
 var nombre = document.getElementById('NombreEmpleado');
 var apellidos = document.getElementById('ApellidosEmpleado');
 var cedula = document.getElementById('CedulaEmpleado');
@@ -39,7 +39,7 @@ function validaForm() {
 
 }
 
-//function agregarEmpleado
+//Botones
 btnAdd.addEventListener('click', function (e) {
   e.preventDefault();
   swal("¡Agregado!", "¡Registro Agregado Exitosamente!", "success");
@@ -69,6 +69,5 @@ btnCancel.addEventListener('click', function (e) {
         swal("");
       }*/
     });
-
-})
+});
 
