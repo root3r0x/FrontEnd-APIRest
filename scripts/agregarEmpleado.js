@@ -86,7 +86,8 @@ function envioJSON() {
       "nombre": nombre.value = "Miguel",
       "apellidos": apellidos.value = "Guadalupe",
       "cedula": cedula.value = "90IO90IKIO",
-      "edad": parseInt(edad.value),
+      //"edad": parseInt(edad.value), Edad del formulario
+      "edad": edad.value = 27,
       "telefono": telefono.value = "8992491860",
       "fecha_nacimiento": fecha
     }
