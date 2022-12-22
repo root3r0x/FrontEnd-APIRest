@@ -1,6 +1,6 @@
 $('#FechaNacimientoEmpleado').datepicker({
   autoclose: true,
-  format: "dd/mm/yyy",
+  format: "yyy/mm/dd",
   todayBtn: "linked",
   clearBtn: true,
   language: "es",
