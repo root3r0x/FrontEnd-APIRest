@@ -16,9 +16,6 @@ var telefono = document.getElementById('TelefonoEmpleado');
 var fecha_nacimiento = document.getElementById('FechaNacimientoEmpleado');
 
 
-/**aa = date.split("-")
-
-date = aa[1] + '-' + aa[2] + '-' + aa[0]*/
 function sendDatos() {
 
   const data = [
@@ -79,7 +76,11 @@ function limpiaCampos() {
 
 function envioJSON() {
 
-  let fecc = new Date();
+  //var fech = document.getElementById('FechaNacimientoEmpleado').value.toString();
+  var fech = fecha_nacimiento.value.toString();
+  var matriz = fech.split('/'); //["12","14","2022"]
+  var fecha = matriz[2] + "-" + matriz[0] + "-" + matriz[1];
+
   const data = [
     {
       "nombre": nombre.value = "Miguel",
@@ -87,10 +88,7 @@ function envioJSON() {
       "cedula": cedula.value = "90IO90IKIO",
       "edad": parseInt(edad.value),
       "telefono": telefono.value = "8992491860",
-      "fecha_nacimiento": fecc,
-      "Año": fecc.getFullYear(),
-      "Mes": fecc.getMonth(),
-      "Día": fecc.getDay()
+      "fecha_nacimiento": fecha
     }
   ];
   //var fecha = document.getElementById('FechaNacimientoEmpleado').value;
