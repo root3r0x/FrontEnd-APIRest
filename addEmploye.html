@@ -82,8 +82,8 @@
       </div>
 
       <div class="form-floating mb-3 col-md ">
-        <input type="number" minlength="10" maxlength="10" class="form-control" id="TelefonoEmpleado"
-          placeholder="telefono" pattern="[0-9]*">
+        <input type="number" maxlength=10 class="form-control" id="TelefonoEmpleado" placeholder="telefono"
+          pattern="[0-9]*">
         <label for="NumeroTelefonicoEmpleado">Número Telefónico:</label>
       </div>
 
@@ -100,7 +100,7 @@
       <div class="form-floating mb-3 col-md">
         <!-- Calendario -->
         <input type="text" class="form-control input-group date" id="FechaNacimientoEmpleado" placeholder="fecha"
-          data-provide="datepicker" readonly>
+          data-provide="datepicker" min="1900-01-01" max="2023-12-31" readonly>
         <label for="FechaNacimientoEmpleado">Fecha de Nacimiento:</label>
       </div>
     </div>
