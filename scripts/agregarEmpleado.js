@@ -15,21 +15,6 @@ var edad = document.getElementById('EdadEmpleado');
 var telefono = document.getElementById('TelefonoEmpleado');
 var fecha_nacimiento = document.getElementById('FechaNacimientoEmpleado');
 
-
-function sendDatos() {
-
-  const data = [
-    {
-      "nombre": "Aplicación de empleados",
-      "apellidos": "Por Amsedel Etraud",
-      "cedula": "00xx00XX00",
-      "edad": 27,
-      "telefono": "8992491869",
-      "fecha_nacimiento": "1995-07-08"
-    }
-  ];
-}
-
 function limpiaCampos() {
   nombre.value = "";
   apellidos.value = "";
@@ -39,16 +24,16 @@ function limpiaCampos() {
   fecha_nacimiento.value = "";
 }
 
-function envioJSON() {
+function sendData() {
 
-/**
-  nombre.value = "Miguel";
-  apellidos.value = "Guadalupe";
-  cedula.value = "90IO90aasKIO";
-  //"edad": parseInt(edad.value), Edad del formulario
-  edad.value = 27;
-  telefono.value = "8992491860";
-**/
+  /**
+    nombre.value = "Miguel";
+    apellidos.value = "Guadalupe";
+    cedula.value = "90IO90aasKIO";
+    //"edad": parseInt(edad.value), Edad del formulario
+    edad.value = 27;
+    telefono.value = "8992491860";
+  **/
   var fech = fecha_nacimiento.value.toString();
   var matriz = fech.split('/'); //["12","14","2022"]
   var fecha = matriz[2] + "-" + matriz[0] + "-" + matriz[1];
@@ -74,35 +59,46 @@ function envioJSON() {
     .then(res =>
       res.json())
     .then(data =>
-      console.log(data + "<=Esta es la databro"))
+      swal("¡Agregado!",
+          "¡Registro " + data.nombre + " agregado Exitosamente!",
+          "success"),
+      limpiaCampos()
+      )
     .catch(
       function (error) {
         swal("Error!", 'Hubo un problema con la petición Fetch:' + error.message, "error");
         console.log('Hubo un problema con la petición Fetch:' + error.message);
       })
-      /**
-    .then(function (data) {
-      if (data.ok) {
-        return data.text();
-      }
-      else {
-        throw "Ocurrio un error";
-      }
-    })
-    .then(function (data) {
-      console.log(data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    }); */
+  /**
+   * 
+
+console.log(data + "<=Esta es la databro");
+      swal("¡Agregado!",
+          "¡Registro Agregado Exitosamente!",
+          "success");
+      limpiaCampos()
+
+.then(function (data) {
+  if (data.ok) {
+    return data.text();
+  }
+  else {
+    throw "Ocurrio un error";
+  }
+})
+.then(function (data) {
+  console.log(data);
+})
+.catch(function (error) {
+  console.log(error);
+}); */
 }
 
 
 //Botones
 btnAdd.addEventListener('click', function (e) {
   e.preventDefault();
-  envioJSON();
-  //swal("¡Agregado!", "¡Registro Agregado Exitosamente!", "success");
+  sendData();
 })
 
 //function Cancelar
