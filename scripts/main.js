@@ -17,24 +17,30 @@ function tabla(datos) {
   tblEmpleados.innerHTML = ''
 
   for (let valor of datos) {
-    
+
     tblEmpleados.innerHTML += `
 
-    <tr>
-     <th scope="row">${valor.id}</th>
-      <td>${valor.nombre}</tb>
-      <td>${valor.apellidos}</tb>
-      <td>${valor.cedula}</tb>
-      <td>${valor.edad}</tb>
-      <td>${valor.telefono}</tb>
-      <td>${valor.fecha_nacimiento}</tb>
-    </tr>
+      <tr>
+        <th scope="row">${valor.id}</th>
+        <td>${valor.nombre}</tb>
+        <td>${valor.apellidos}</tb>
+        <td>${valor.cedula}</tb>
+        <td>${valor.edad}</tb>
+        <td>${valor.telefono}</tb>
+        <td>${valor.fecha_nacimiento}</tb>
+
+        <td>
+          <input type="submit" class="btn btn-outline-dark btn-sm" name="${valor.id}" value="editar"></input>
+        </td>
+
+      </td>
+    </tr >
     `
   }
 }
 //function validaciones
 var txtNombre = document.getElementById("")
-function validaForm(){
+function validaForm() {
 }
 
 window.onload = function () {
