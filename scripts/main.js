@@ -30,7 +30,17 @@ function tabla(datos) {
         <td>${valor.fecha_nacimiento}</tb>
 
         <td>
-          <input type="submit" class="btn btn-outline-dark btn-sm" name="${valor.id}" value="editar"></input>
+          <input type="image"
+            class="btn btn-outline-warning btn-sm"
+            name="${valor.id}" 
+            src="/images/edit.svg">
+          </input>
+          
+          <input type="image"
+            class="btn btn-outline-danger btn-sm"
+            name="${valor.id}" 
+            src="/images/trash.svg"
+          </input>
         </td>
 
       </td>
