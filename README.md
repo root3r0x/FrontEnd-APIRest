@@ -31,7 +31,7 @@ Técnologías utilizadas:
 
 El servidor de Spring se ejectuta por defecto en el puerto _**8080**_ por lo cúal y para evitar conflictos lanzaremos la página principal sobre el puerto _**8081**_ en el localhost (127.0.0.1). Para realizar esto nos apoyaremos de la extención _live server_ estando ubicados sobre la carpeta raíz del proyecto dónde se encuentra nuestro archivo _index.html_:
 
-![Image](./images/docs/rootPATH.jpg)
+![Image](https://github.com/root3r0x/FrontEnd-APIRest/blob/main/images/docs/rootPATH.JPG)
 
 Ejecutaremos el siguiente comando:
 
