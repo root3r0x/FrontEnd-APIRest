@@ -61,5 +61,40 @@
         "edad": 72,
         "telefono": "8992491869",
         "fecha_nacimiento": "1995-07-08T00:00:00.000+00:00"
+    },
+    {
+        "id": 33,
+        "nombre": "Le Epuladaug",
+        "apellidos": "Etraud",
+        "cedula": "0010000001",
+        "edad": 72,
+        "telefono": "8992491869",
+        "fecha_nacimiento": "1995-07-08T00:00:00.000+00:00"
+    },
+    {
+        "id": 33,
+        "nombre": "Le Epuladaug",
+        "apellidos": "Etraud",
+        "cedula": "0010000001",
+        "edad": 72,
+        "telefono": "8992491869",
+        "fecha_nacimiento": "1995-07-08T00:00:00.000+00:00"
+    },
+    {
+        "id": 33,
+        "nombre": "Le Epuladaug",
+        "apellidos": "Etraud",
+        "cedula": "0010000001",
+        "edad": 72,
+        "telefono": "8992491869",
+        "fecha_nacimiento": "1995-07-08T00:00:00.000+00:00"
+    },
+    {
+        "id": 55,
+        "nombre": "Benito",
+        "apellidos": "Júarez Gárcia",
+        "edad": 72,
+        "telefono": "8992491860",
+        "fecha_nacimiento": "1995-04-21T00:00:00.000+00:00"
     }
 ]

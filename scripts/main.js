@@ -4,6 +4,7 @@ var contenido = document.querySelector('#tblEmpleados');
 var btnAdd = document.getElementById('btnAgregarEmpleado');
 var btnCancel = document.getElementById('btnCancelar');
 
+
 function traer() {
   //fetch('http://127.0.0.1:8080/empleados')
   fetch('scripts/listaEmpleados.json')
@@ -12,6 +13,7 @@ function traer() {
       tabla(datos)
     })
 }
+
 function tabla(datos) {
   //console.log(datos)
   tblEmpleados.innerHTML = ''
@@ -44,7 +46,7 @@ function tabla(datos) {
         </td>
 
       </td>
-    </tr >
+    </tr>
     `
   }
 }
