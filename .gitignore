@@ -3,6 +3,7 @@
 
 ### Backup de README ###
 README.md.backup
+.gitignore
 
 ### VS Code ###
 .vscode/
