@@ -1,6 +1,5 @@
 ### JSON para pruebas ###
-/scripts/listaEmpelados.json
-
+scripts/listaEmpleados.json
 ### Backup de README ###
 README.md.backup
 .gitignore
