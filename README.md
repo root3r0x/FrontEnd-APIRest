@@ -94,9 +94,9 @@ En la sección de agregar empleados tenemos un formulario sencillo en el cual in
 Formulario utilizando los estilos de bootstrap, es responsivo es decir que se adapta al tamaño de la pantalla del dispositivo. Cuenta con dos botones de acción:
 
 - Aceptar:
-+ Una vez llenos los datos requeridos (validar campos) con este botón mandamos la petición JSON con el método post de fetch api para realizar la petición al servidor. Una vez dado de alta el registro nos muestra una alerta (sweet alert) confirmando el registro. En caso contrario nos indica el error que sucedió en el proceso.
+   * Una vez llenos los datos requeridos (validar campos) con este botón mandamos la petición JSON con el método post de fetch api para realizar la petición al servidor. Una vez dado de alta el registro nos muestra una alerta (sweet alert) confirmando el registro. En caso contrario nos indica el error que sucedió en el proceso.
 - Cancelar:
-+ Este botón sirve para cancelar el registro para lo cual una alerta (sweet alert) nos pedirá confirmación, de pulsar aceptar procede a limpiar los campos dejando listo el formulario para un nuevo registro. En caso contrario solo se cierra la ventana sin alterar los datos del formulario.
+   * Este botón sirve para cancelar el registro para lo cual una alerta (sweet alert) nos pedirá confirmación, de pulsar aceptar procede a limpiar los campos dejando listo el formulario para un nuevo registro. En caso contrario solo se cierra la ventana sin alterar los datos del formulario.
 
 ---
 
