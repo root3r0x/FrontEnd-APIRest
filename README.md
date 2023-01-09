@@ -44,7 +44,7 @@ El comando contiene dos parámetros *_--no-browser_* y *__--port=8081__* los cua
 
 Una vez ejecutado el comando tendremos en la terminal o prompt dependiendo lo que use la siguiente pantalla (en mi caso estoy usando la Windows Terminal):
 
-![Image](https://github.com/root3r0x/FrontEnd-APIRest/blob/main/images/docs/live_server_command.jpg)
+![Image](https://github.com/root3r0x/FrontEnd-APIRest/blob/main/images/docs/live_server_command.JPG)
 
 Teniendo el servidor corriendo solo nos dirigiremos a nuestro local host ya sea usando _*https://localhost:8081*_ o _*127.0.0.1:8081*_ indicando en la URL el puerto 8081 que es donde esta corriendo nuestra página web.
 
@@ -55,13 +55,13 @@ Teniendo el servidor corriendo solo nos dirigiremos a nuestro local host ya sea 
 
 En nuestro navegador veremos lo siguiente:
 
-![Image](https://github.com/root3r0x/FrontEnd-APIRest/blob/main/images/docs/index.jpg)
+![Image](https://github.com/root3r0x/FrontEnd-APIRest/blob/main/images/docs/index.JPG)
 
 ###### Menú principal
 
 Para poder navegar en el sitio web tendemos el siguiente menú:
 
-![Image](https://github.com/root3r0x/FrontEnd-APIRest/blob/main/images/docs/menu.jpg)
+![Image](https://github.com/root3r0x/FrontEnd-APIRest/blob/main/images/docs/menu.JPG)
 
 Cuenta con 3 rutas básicas a las acciones _Agregar Empleados_, _Modificar Lista_, y _Página principal_ , para poder saber en que parte estamos ubicados basta con mirar el menú dónde estará activa la opción de la página actual.
 
