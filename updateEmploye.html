@@ -8,7 +8,6 @@
   integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <!--script src="scripts/empleados.js"></script-->
-<script src="scripts/modificarEmpleado.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lista de empleados</title>
 
@@ -41,25 +40,114 @@
   <br />
 
   <!--Body -->
+    <!-- Formulario para agregar empleados -->
   <div class="container-sm text-center mb-3">
-
-    <!-- Table -->
-    <table id="users">
-      <thead>
-        <tr>
-          <th>Firstname</th>
-          <th>Last Name</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-      <table>
+    <!-- Tabla de empleados-->
+    <div class="table-responsive">
+      <table class="table caption-top table-hover">
+        <caption>
+          <h4>
+            Actualizar  empleado
+          </h4>
+        </caption>
       </table>
+    </div>
 
+    <div class="row g-2">
+      <div id="formEmpleadosAgregar" class="form-floating mb-3 col-md">
+        <input type=" text" class="form-control" id="olNombreEmpleado" placeholder="nombre" disabled>
+        <label for="olNombreEmpleado">Nombre:</label>
+      </div>
+
+      <div id="formEmpleadosAgregar" class="form-floating mb-3 col-md">
+        <input type=" text" class="form-control" id="NombreEmpleado" placeholder="nombre" required>
+        <label for="NombreEmpleado">Nombre:</label>
+      </div>
+    </div>
+
+    <div class="row g 2">
+      
+      <div class="form-floating mb-3 col-md">
+        <input type="text" class="form-control" id="olApellidosEmpleado" placeholder="apellidos" disabled>
+        <label for="olApellidosEmpleado">Apellidos:</label>
+      </div>
+
+      <div class="form-floating mb-3 col-md">
+        <input type="text" class="form-control" id="ApellidosEmpleado" placeholder="apellidos">
+        <label for="ApellidosEmpleado">Apellidos:</label>
+      </div>
+
+    </div>
+
+    <div class="row g-2">
+      <!--Cedula -->
+      <div class="form-floating mb-3 col-md">
+        <input type="text" maxlength=10 class="form-control" id="olCedulaEmpleado" placeholder="cedula" disabled> <!--  -->
+        <label for="olCedulaEmpleado">#Cedula:</label>
+      </div>
+
+      <div class="form-floating mb-3 col-md">
+        <input type="text" maxlength=10 class="form-control" id="CedulaEmpleado" placeholder="cedula"> <!--  -->
+        <label for="CedulaEmpleado">#Cedula:</label>
+      </div>
+
+    </div>
+
+
+    <div class="row g-2">
+          <!--Cedula -->
+          <div class="form-floating mb-3 col-md ">
+            <input type="number" maxlength=10 class="form-control" id="olTelefonoEmpleado" placeholder="telefono"
+              pattern="[0-9]*" disabled>
+            <label for="olNumeroTelefonicoEmpleado">Número Telefónico:</label>
+          </div>
+
+          <div class="form-floating mb-3 col-md ">
+            <input type="number" maxlength=10 class="form-control" id="TelefonoEmpleado" placeholder="telefono"
+              pattern="[0-9]*">
+            <label for="NumeroTelefonicoEmpleado">Número Telefónico:</label>
+          </div>
+    </div>
+
+    <div class="row g-2">
+      <div class="form-floating mb-3 col-md">
+        <input type="number" pattern="[0-9]*" min="01" max="99" class="form-control" id="olEdadEmpleado"
+          placeholder="edad" disabled>
+        <label for="olEdadEmpleado">Edad:</label>
+      </div>
+
+      <div class="form-floating mb-3 col-md">
+        <input type="number" pattern="[0-9]*" min="01" max="99" class="form-control" id="EdadEmpleado"
+          placeholder="edad">
+        <label for="EdadEmpleado">Edad:</label>
+      </div>
+    </div>
+
+    <div class="row g-2">
+      <div class="form-floating mb-3 col-md">
+        <input type="text" class="form-control input-group date" id="olFechaNacimientoEmpleado" placeholder="fecha"
+          data-provide="datepicker" min="1900-01-01" max="2023-12-31" readonly disabled>
+        <label for="olFechaNacimientoEmpleado">Fecha de Nacimiento:</label>
+      </div>
+
+      <div class="form-floating mb-3 col-md">
+        <input type="text" class="form-control input-group date" id="FechaNacimientoEmpleado" placeholder="fecha"
+          data-provide="datepicker" min="1900-01-01" max="2023-12-31" readonly>
+        <label for="FechaNacimientoEmpleado">Fecha de Nacimiento:</label>
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-4">
+      <button id="btnAgregarEmpleado" class="btn btn-primary me-md-2 btn-lg" type="button">Agregar</button>
+      <button id="btnCancelar" class="btn btn-danger btn-lg" type="button">Cancelar</button>
+    </div>
+
+    <!--Alertas -->
   </div>
 
   <!-- footer-->
-  <div class="container navbar-fixed-bottom fixed-bottom">
+  <div class="container navbar-fixed-bottom">
     <footer class="py-5">
       <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
         <p>&copy; 2022/2023 DuckLabs, Inc. Todos los derechos reservados.</p>
@@ -70,6 +158,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
-</body>
 
+  <!-- Libs -->
+  <link rel="stylesheet" href="stylesheets/libs/bootstrap-datepicker.standalone.css">
+  <script src="scripts/libs/bootstrap-datepicker.js"></script>
+  <script src="scripts/modificarEmpleado.js"></script>
+
+</body>
 </html>
