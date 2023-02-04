@@ -4,16 +4,6 @@
 
 /**
  *
-  console.log(data.id);
-  console.log(data.nombre);
-  console.log(data.apellidos);
-  console.log(data.cedula);
-  console.log(data.edad);
-  console.log(data.telefono);
-  console.log(data.fecha_nacimiento);
-  console.log(data); 
-  
-
   fetch('http://localhost:8081/updateEmploye.html', {
     method: 'POST',
     mode: 'no-cors',
@@ -36,61 +26,49 @@ function traer() {
     })
 }
 
-let empleado = [];  //Obtenemos el objeto del localStorage.
-let cEmpleado = []; //Guardamos los datos limpios.
-
-function clearData() {
+let empleado = [];  //Declaramos el array vacio para obtener el objeto del localStorage.
+function setDatos() {
 
   empleado = JSON.parse(localStorage.getItem("empleadoKey"));
 
+  var nom = empleado[0].nombre.toString().split('\n');
+  var ap = empleado[0].apellidos.toString().split('\n');
+  var ced = empleado[0].cedula.toString().split('\n');
+  var num = empleado[0].telefono.toString().split('\n');
+  var fech = empleado[0].fecha_nacimiento.toString().split('T');
+
   var id = empleado[0].id;
+  var nombre = nom[0];
+  var apellidos = ap[0];
+  var cedula = ced[0];
+  var numero = num[0];
   var edad = empleado[0].edad;
+  var fecha = fech[0];
 
-  var nombre = empleado[0].nombre;
-  var apellidos = empleado[0].apellidos;
-  var cedula = empleado[0].cedula;
-  var numero = empleado[0].numeroTelefono;
-  var fecha = empleado[0].fecha_nacimiento;
+  document.getElementById('olIdEmpleado').value = id;
 
-  cEmpleado = {}
+  document.getElementById('olNombreEmpleado').value = nombre;
+  document.getElementById('NombreEmpleado').value = nombre;
+  document.getElementById('olApellidosEmpleado').value = apellidos;
+  document.getElementById('ApellidosEmpleado').value = apellidos;
+  document.getElementById('olCedulaEmpleado').value = cedula;
+  document.getElementById('CedulaEmpleado').value = cedula;
 
-  /**  cEmpleado = {
-      apellidos: "prueba 3333333\n        ",
-      cedula: "1234567890\n        ",
-      edad: 27,
-      fecha_nacimiento: "1995-07-08T00:00:00.000+00:00\n\n        ",
-      id: 456,
-      nombre: "usuario 3333\n        ",
-      telefono: "8993339990\n        "
-    }
-   **/
+  document.getElementById('olTelefonoEmpleado').value = numero;
+  document.getElementById('TelefonoEmpleado').value = numero;
+
+  document.getElementById('olEdadEmpleado').value = edad;
+  document.getElementById('EdadEmpleado').value = edad;
+  document.getElementById('olFechaNacimientoEmpleado').value = fecha;
+  document.getElementById('FechaNacimientoEmpleado').value = fecha;
+
+  localStorage.removeItem("empleadoKey");
 }
 
-function setDatos() {
-
-  empleado = clearData();
-
-  document.getElementById('olIdEmpleado').value = empleado[0].id;
-
-  document.getElementById('olNombreEmpleado').value = empleado[0].nombre;
-  document.getElementById('NombreEmpleado').value = empleado[0].nombre;
-  document.getElementById('olApellidosEmpleado').value = empleado[0].apellidos;
-  document.getElementById('ApellidosEmpleado').value = empleado[0].apellidos;
-  document.getElementById('olCedulaEmpleado').value = empleado[0].cedula;
-  document.getElementById('CedulaEmpleado').value = empleado[0].cedula;
-
-  //document.getElementById('olNumeroTelefonicoEmpleado').value = empleado[0].telefono;
-  //document.getElementById('NumeroTelefonicoEmpleado').value = empleado[0].telefono;
-
-  document.getElementById('olEdadEmpleado').value = empleado[0].edad;
-  document.getElementById('EdadEmpleado').value = empleado[0].edad;
-  document.getElementById('olFechaNacimientoEmpleado').value = empleado[0].fecha_nacimiento;
-  document.getElementById('FechaNacimientoEmpleado').value = empleado[0].fecha_nacimiento;
-
+function clearDatos() {
   console.log("??");
   //localStorage.removeItem("empleadoKey");
   debugger;
-
 }
 
 window.onload = function () {
