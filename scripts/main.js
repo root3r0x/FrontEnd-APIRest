@@ -10,36 +10,13 @@ function traer() {
     })
 }
 
-function updateEmploye(data) {
+function updateEmploye(datosEmpleado) {
 
-  var mydata = JSON.stringify(data);
+  var empleado = JSON.stringify(datosEmpleado);
 
-  localStorage.setItem("datos", mydata);
+  localStorage.setItem("empleadoKey", empleado);
+
   window.location.replace("/updateEmploye.html");
-
-  /* console.log(data.id);
-  console.log(data.nombre);
-  console.log(data.apellidos);
-  console.log(data.cedula);
-  console.log(data.edad);
-  console.log(data.telefono);
-  console.log(data.fecha_nacimiento);
-  console.log(data); 
-  
-
-  fetch('http://localhost:8081/updateEmploye.html', {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-      'Accept': 'application/json, text/plain, * / *',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then(data => data.json())
-    .then(data => console.log(JSOn.stringify(data))
-    );
-  */
 }
 
 function deleteEmploye(empleado) {
@@ -108,12 +85,13 @@ function tabla(datos) {
 
       //btn Editar  {"id": 78912}
       if (e.target.matches('.btn-secondary')) {
-        var data = [{
+
+        var datosEmpleado = [{
           "id": parseInt(e.target.parentElement.parentElement.children[0].textContent),
           "nombre": e.target.parentElement.parentElement.children[1].textContent.toString(),
           "apellidos": e.target.parentElement.parentElement.children[2].textContent.toString(),
           "cedula": e.target.parentElement.parentElement.children[3].textContent.toString(),
-          "edad": e.target.parentElement.parentElement.children[4].textContent.toString(),
+          "edad": parseInt(e.target.parentElement.parentElement.children[4].textContent),
           "telefono": e.target.parentElement.parentElement.children[5].textContent.toString(),
           "fecha_nacimiento": e.target.parentElement.parentElement.children[6].textContent.toString()
         }];
@@ -127,7 +105,7 @@ function tabla(datos) {
           "telefono": e.target.parentElement.parentElement.children[5].textContent,
           "fecha_nacimiento": e.target.parentElement.parentElement.children[6].textContent
         }];
-        updateEmploye(data2);
+        updateEmploye(datosEmpleado);
       }
 
       //btn Eliminar

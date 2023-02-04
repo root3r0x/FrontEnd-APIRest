@@ -9,6 +9,15 @@
         "fecha_nacimiento": "1995-07-08T00:00:00.000+00:00"
     },
     {
+        "id": 456,
+        "nombre": "usuario 3333",
+        "apellidos": "prueba 3333333",
+        "cedula": "1234567890",
+        "edad": 27,
+        "telefono": "8993339990",
+        "fecha_nacimiento": "1995-07-08T00:00:00.000+00:00"
+    },
+    {
         "id": 2,
         "nombre": "usuario 2",
         "apellidos": "prueba prueba",
