@@ -64,24 +64,36 @@
     </div>
     <div id="formEmpleadosAgregar" class="form-floating mb-3">
       <input type=" text" class="form-control" id="NombreEmpleado" placeholder="nombre" required>
-      <label for="NombreEmpleado">Nombre:</label>
+      <label for="NombreEmpleado">
+        <i class="bi bi-person-fill"></i>
+        Nombre:
+      </label>
     </div>
     <div class="form-floating mb-3">
       <input type="text" class="form-control" id="ApellidosEmpleado" placeholder="apellidos">
-      <label for="ApellidosEmpleado">Apellidos:</label>
+      <label for="ApellidosEmpleado">
+        <i class="bi bi-people-fill"></i>
+        Apellidos:
+      </label>
     </div>
 
     <div class="row g-2">
       <!--Cedula -->
       <div class="form-floating mb-3 col-md">
         <input type="text" maxlength=10 class="form-control" id="CedulaEmpleado" placeholder="cedula"> <!--  -->
-        <label for="CedulaEmpleado">#Cedula:</label>
+        <label for="CedulaEmpleado">
+          <i class="bi bi-person-vcard-fill"></i>
+          Cedula:
+        </label>
       </div>
 
       <div class="form-floating mb-3 col-md ">
         <input type="number" maxlength=10 class="form-control" id="TelefonoEmpleado" placeholder="telefono"
           pattern="[0-9]*">
-        <label for="NumeroTelefonicoEmpleado">Número Telefónico:</label>
+        <label for="NumeroTelefonicoEmpleado">
+          <i class="bi bi-telephone-fill"></i>
+          Número Telefónico:
+        </label>
       </div>
 
     </div>
@@ -90,7 +102,10 @@
       <div class="form-floating mb-3 col-md">
         <input type="number" pattern="[0-9]*" min="01" max="99" class="form-control" id="EdadEmpleado"
           placeholder="edad">
-        <label for="EdadEmpleado">Edad:</label>
+        <label for="EdadEmpleado">
+          <i class="bi bi-info-circle"></i>
+          Edad:
+        </label>
       </div>
 
 
@@ -98,14 +113,22 @@
         <!-- Calendario -->
         <input type="text" class="form-control input-group date" id="FechaNacimientoEmpleado" placeholder="fecha"
           data-provide="datepicker" min="1900-01-01" max="2023-12-31" readonly>
-        <label for="FechaNacimientoEmpleado">Fecha de Nacimiento:</label>
+        <label for="FechaNacimientoEmpleado">
+          <i class="bi bi-calendar2-date"></i>
+          Fecha de Nacimiento:</label>
       </div>
     </div>
 
     <!-- Botones -->
     <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-4">
-      <button id="btnAgregarEmpleado" class="btn btn-primary me-md-2 btn-lg" type="button">Agregar</button>
-      <button id="btnCancelar" class="btn btn-danger btn-lg" type="button">Cancelar</button>
+      <button id="btnAgregarEmpleado" class="btn btn-primary me-md-2 btn-lg" type="button">
+        <i class="bi bi-person-add"></i>
+        Agregar
+      </button>
+      <button id="btnCancelar" class="btn btn-danger btn-lg" type="button">
+        <i class="bi bi-person-x"></i>
+        Cancelar
+      </button>
     </div>
 
     <!--Alertas -->
