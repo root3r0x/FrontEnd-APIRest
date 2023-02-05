@@ -56,23 +56,12 @@
     </div>
 
     <!-- Select para agregar empleados en caso de obtener un LocalStorage nullo -->
-    <div class="dropdown form-select d-grid gap-2 d-md-flex justify-content-md-end mb-4 visually-hidden"
-      data-bs-theme="dark">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark"
-        data-bs-toggle="dropdown" aria-expanded="false">
-        Dark dropdown
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
-        <li><a class="dropdown-item active" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-      </ul>
-    </div>
+    <select id="listaEmpleados" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" hidden>
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
     <!-- end -->
 
 
